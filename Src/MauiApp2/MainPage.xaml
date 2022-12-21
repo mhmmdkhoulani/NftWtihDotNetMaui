@@ -23,11 +23,11 @@
                 Aspect="AspectFill"
                 HorizontalOptions="Fill"
                 VerticalOptions="Fill"
-                WidthRequest="100"
-                HeightRequest="100">
+                WidthRequest="137"
+                HeightRequest="137">
                 <Image.Clip>
                     <RoundRectangleGeometry
-                        Rect="0,0,100,100"
+                        Rect="0,0,137,137"
                         CornerRadius="16"/>
                 </Image.Clip>
             </Image>
@@ -56,16 +56,16 @@
     </ContentPage.Resources>
 
     <Grid IgnoreSafeArea="True"
-          RowDefinitions="498,Auto,*,76">
+          RowDefinitions="598,Auto,*,76">
         
         <!--Main Grid-->
 
         <Grid 
             Grid.Row="0"
             IgnoreSafeArea="True"
-            RowDefinitions="100,14,100,14,100,14,100"
+            RowDefinitions="137,14,137,14,137,14,137"
             Rotation="-10"
-            Margin="-60">
+            Margin="-60,0">
 
             <!--Collection View 1-->
             <CollectionView 
@@ -99,7 +99,7 @@
             <BoxView.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Color="#ffffff" Offset="0.0"/>
-                    <GradientStop Color="#ffffff" Offset="1.0"/>
+                    <GradientStop Color="#00ffffff" Offset="1.0"/>
                 </LinearGradientBrush>
             </BoxView.Background>
         </BoxView>
@@ -113,7 +113,7 @@
             <BoxView.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Color="#ffffff" Offset="1.0"/>
-                    <GradientStop Color="#ffffff" Offset="0.0"/>
+                    <GradientStop Color="#00ffffff" Offset="0.0"/>
                 </LinearGradientBrush>
             </BoxView.Background>
         </BoxView>
@@ -136,7 +136,7 @@
             HorizontalTextAlignment="Center"
             HorizontalOptions="Center"
             FontSize="28"
-            Margin="40,12,40,0"
+            Margin="48,12,48,0"
             LineHeight="1.2">
             
         </Label>
@@ -151,7 +151,7 @@
             HorizontalOptions="Center"
             VerticalOptions="Start"
             FontSize="18"
-            Margin="40,12,40,0"
+            Margin="32,12,32,0"
             LineHeight="1.2">
 
         </Label>
