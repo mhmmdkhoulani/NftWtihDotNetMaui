@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <!--Grid stye-->
+        <Style TargetType="Grid">
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="RowSpacing" Value="0"/>
+            <Setter Property="ColumnSpacing" Value="0"/>
+            <Setter Property="VerticalOptions" Value="Fill"/>
+            <Setter Property="HorizontalOptions" Value="Fill"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+        
+        <!--Data Template-->
+        <DataTemplate x:Key="ImageTemplate">
+            <Image
+                Source="{Binding .}"
+                Aspect="AspectFill"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                WidthRequest="100"
+                HeightRequest="100">
+                <Image.Clip>
+                    <RoundRectangleGeometry
+                        Rect="0,0,100,100"
+                        CornerRadius="16"/>
+                </Image.Clip>
+            </Image>
+        </DataTemplate>
+        
+        <!--collectionview style-->
+        <Style TargetType="CollectionView">
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="ItemSizingStrategy" Value="MeasureFirstItem"/>
+            <Setter Property="VerticalOptions" Value="Fill"/>
+            <Setter Property="HorizontalOptions" Value="Fill"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="VerticalScrollBarVisibility" Value="Never"/>
+            <Setter Property="HorizontalScrollBarVisibility" Value="Never"/>
+            <Setter Property="SelectionMode" Value="None"/>
+            <Setter Property="ItemTemplate" Value="{StaticResource ImageTemplate}"/>
+            <Setter Property="ItemsLayout">
+                <LinearItemsLayout
+                    Orientation="Horizontal"
+                    ItemSpacing="14"/>
+            </Setter>
+
+
+        </Style>
+        
+    </ContentPage.Resources>
+
+    <Grid IgnoreSafeArea="True"
+          RowDefinitions="498,Auto,*,76">
+        
+        <!--Main Grid-->
+
+        <Grid 
+            Grid.Row="0"
+            IgnoreSafeArea="True"
+            RowDefinitions="100,14,100,14,100,14,100">
+
+            <!--Collection View 1-->
+            <CollectionView 
+                ItemsSource="{Binding ImageList1, Mode=OneWay}"
+                Grid.Row="0"/>
+
+
+            <!--Collection View 2-->
+            <CollectionView 
+                 ItemsSource="{Binding ImageList2, Mode=OneWay}"
+                Grid.Row="2"/>
+            
+            <!--Collection View 3-->
+            <CollectionView 
+                 ItemsSource="{Binding ImageList3, Mode=OneWay}"
+                Grid.Row="4"/>
+            
+            <!--Collection View 4-->
+            <CollectionView 
+                 ItemsSource="{Binding ImageList4, Mode=OneWay}"
+                Grid.Row="6"/>
+
+        </Grid>
+        
+        <!--Header-->
+        <Label 
+            Grid.Row="1"
+            Text="Discover Big Collection Of Cards"
+            FontFamily="AtypDisplayBold"
+            TextColor="#151515"
+            HorizontalTextAlignment="Center"
+            HorizontalOptions="Center"
+            FontSize="28"
+            Margin="40,12,40,0"
+            LineHeight="1.2">
+            
+        </Label>
+        
+        <!--Info-->
+        <Label 
+            Grid.Row="2"
+            Text="Explore top collecion of Cards and buy and sell them easely"
+            FontFamily="AtypDisplayRegular"
+            TextColor="#888888"
+            HorizontalTextAlignment="Center"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            FontSize="18"
+            Margin="40,12,40,0"
+            LineHeight="1.2">
+
+        </Label>
+        <!--Button-->
+        <Button
+            Grid.Row="3"
+            Text="Start Exploring"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill"
+            Margin="32,0,32,24"
+            FontSize="18"
+            TextColor="#fff"
+            FontFamily="AtypDisplayBold"
+            BackgroundColor="#000"
+            BorderWidth="0"
+            CornerRadius="26">
+            
+        </Button>
+        
+        
+    </Grid>
+</ContentPage>
