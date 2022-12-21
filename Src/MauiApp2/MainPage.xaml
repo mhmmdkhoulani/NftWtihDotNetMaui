@@ -63,7 +63,9 @@
         <Grid 
             Grid.Row="0"
             IgnoreSafeArea="True"
-            RowDefinitions="100,14,100,14,100,14,100">
+            RowDefinitions="100,14,100,14,100,14,100"
+            Rotation="-10"
+            Margin="-60">
 
             <!--Collection View 1-->
             <CollectionView 
@@ -88,6 +90,43 @@
 
         </Grid>
         
+        <!--TopGradiet-->
+        <BoxView 
+            HorizontalOptions="Fill"
+            VerticalOptions="Start"
+            HeightRequest="90"
+            Grid.Row="0">
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#ffffff" Offset="0.0"/>
+                    <GradientStop Color="#ffffff" Offset="1.0"/>
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+        
+        <!--BottomGradient-->
+        <BoxView 
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            HeightRequest="90"
+            Grid.Row="0">
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#ffffff" Offset="1.0"/>
+                    <GradientStop Color="#ffffff" Offset="0.0"/>
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+        
+        
+        
+        <!--Background-->
+        <BoxView 
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill"
+            Grid.Row="1"
+            Grid.RowSpan="3"
+            BackgroundColor="White"/>
         <!--Header-->
         <Label 
             Grid.Row="1"

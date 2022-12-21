@@ -3,6 +3,7 @@
 public partial class MainPage : ContentPage
 {
 	private List<string> _allImages;
+	private Random _random = new Random();
 	public List<string> ImageList1 { get; set; }
 	public List<string> ImageList2 { get; set; }
 	public List<string> ImageList3 { get; set; }
@@ -12,10 +13,10 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 		GenerateData();
-		ImageList1 = _allImages;
-		ImageList2 = _allImages;
-		ImageList3 = _allImages;
-		ImageList4 = _allImages;
+		ImageList1 = Randomize(_allImages);
+		ImageList2 = Randomize(_allImages);
+		ImageList3 = Randomize(_allImages);
+		ImageList4 = Randomize(_allImages);
         BindingContext = this;
 	}
 
@@ -27,6 +28,8 @@ public partial class MainPage : ContentPage
 			_allImages.Add($"img{i.ToString("00")}.png");
 		}
 	}
+
+	private List<T> Randomize<T>(List<T> source) => source.OrderBy<T, int>((item) => _random.Next()).ToList();
 	
 }
 
