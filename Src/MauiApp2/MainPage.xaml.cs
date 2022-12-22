@@ -30,6 +30,10 @@ public partial class MainPage : ContentPage
 	}
 
 	private List<T> Randomize<T>(List<T> source) => source.OrderBy<T, int>((item) => _random.Next()).ToList();
-	
+
+	async void GoToLogin(object sender, EventArgs args)
+	{
+		await Shell.Current.GoToAsync(nameof(LoginPage), true);
+	}
 }
 

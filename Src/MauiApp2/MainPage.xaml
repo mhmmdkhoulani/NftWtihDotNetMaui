@@ -144,7 +144,7 @@
         <!--Info-->
         <Label 
             Grid.Row="2"
-            Text="Explore top collecion of Cards and buy and sell them easely"
+            Text="Explore top collecion of Cards and buy and sell them easily"
             FontFamily="AtypDisplayRegular"
             TextColor="#888888"
             HorizontalTextAlignment="Center"
@@ -167,7 +167,8 @@
             FontFamily="AtypDisplayBold"
             BackgroundColor="#000"
             BorderWidth="0"
-            CornerRadius="26">
+            CornerRadius="26"
+            Clicked="GoToLogin">
             
         </Button>
         
