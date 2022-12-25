@@ -57,6 +57,10 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\dotnet_bot.svg" />
+	  <BundleResource Include="Resources\Images\menu.png" />
+	  <BundleResource Include="Resources\Images\notification.png" />
+	  <BundleResource Include="Resources\Images\bell.png" />
+	  <BundleResource Include="Resources\Images\mastercard.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiXaml Update="LoginPage.xaml">
@@ -68,6 +72,10 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="Custom Render\" />
+	  <None Remove="Resources\Images\menu.png" />
+	  <None Remove="Resources\Images\notification.png" />
+	  <None Remove="Resources\Images\bell.png" />
+	  <None Remove="Resources\Images\mastercard.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Custom Render\" />

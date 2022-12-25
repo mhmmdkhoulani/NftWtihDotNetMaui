@@ -2,11 +2,266 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp2.HomePage"
-             Title="HomePage">
-    <VerticalStackLayout>
+             Title="HomePage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+
+
+    </ContentPage.Resources>
+
+
+    <VerticalStackLayout Spacing="20">
+       <Grid ColumnDefinitions="*,Auto,Auto" Margin="20">
+           <ImageButton Grid.Column="0"
+                        Aspect="AspectFill"
+                        BackgroundColor="Transparent"
+                        HeightRequest="30"
+                        HorizontalOptions="Start"
+                        WidthRequest="30"
+                        Source="menu.png"
+                        >
+
+           </ImageButton>
+
+            <ImageButton Grid.Column="1"
+                        Aspect="AspectFill"
+                        BackgroundColor="Transparent"
+                        HeightRequest="30"
+                        HorizontalOptions="Start"
+                        WidthRequest="30"
+                        Source="bell.png"
+                        >
+
+           </ImageButton>
+           <Frame Padding="0"
+                  HeightRequest="50"
+                  WidthRequest="50"
+                  BackgroundColor="Transparent"
+                  CornerRadius="8"
+                  Grid.Column="2"
+                  HasShadow="False"
+                  Margin="20,0,0,0"
+                  IsClippedToBounds="True"
+                  >
+               <Frame.Content>
+
+                   <Image 
+                          Aspect="AspectFill"
+                          Source="img03.png"
+                  />
+               </Frame.Content>
+
+           </Frame>
+           
+
+       </Grid>
+
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Grid.Row="2"
+            Text="Hi, Mohammad"
+            FontFamily="AtypDisplayBold"
+            TextColor="#000"
+            HorizontalTextAlignment="Start"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            FontSize="25"
+            Margin="32,12,32,0"
+            LineHeight="1.2">
+
+        </Label>
+        
+
+
+
+            <CarouselView VerticalOptions="FillAndExpand"
+                          Loop="False">
+        <CarouselView.ItemsSource>
+            <x:Array Type="{x:Type ContentView}">
+                <ContentView>
+                   <StackLayout>
+         <Frame Margin="20,10,20,30"
+                   Padding="20"
+                   Visual="Material"
+                   BackgroundColor="#000"
+                   HasShadow="False">
+                <Grid ColumnSpacing="30"
+                      RowSpacing="0">
+                   <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions> 
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="70"/>
+                    </Grid.ColumnDefinitions>
+                  
+                    <Image Source="new_logo.png"
+                           HeightRequest="40"
+                           Grid.Row="0"
+                           Grid.Column="2"
+                           HorizontalOptions="Start"/>
+
+                    <Label Text="Available Balance"
+                           LineBreakMode="TailTruncation"
+                           FontSize="14"
+                           TextColor="#fdfdfd"
+                           Grid.Row="0"
+                           Grid.ColumnSpan="2"
+                           Grid.Column="0"
+                           />
+                    
+                     <Label Text="4,980,00 L.L"
+                            FontSize="30"
+                            TextColor="#fdfdfd"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            FontFamily="AtypDisplayBold"/>
+
+
+                    <Label Text="**** **** **** ****"
+                           Margin="0,20, 0, 0"
+                            FontSize="23"
+                            TextColor="#fdfdfd"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            FontFamily="AtypDisplayBold"/>
+
+                    <Label Text="Expiration"
+                           Margin="0,20,0,0"
+                           FontSize="12"
+                           TextColor="#fdfdfd"
+                           Grid.Row="3"
+                           Grid.RowSpan="2"
+                           Grid.Column="0"/>
+                    
+                    <Label Text="12/24"
+                            FontSize="20"
+                            TextColor="#fdfdfd"
+                            Grid.Row="4"
+                            Grid.Column="0"/>
+                    
+                     <Label Text="Cvv"
+                            Margin="0,20,0,0"
+                           FontSize="12"
+                           TextColor="#fdfdfd"
+                           Grid.Row="3"
+                           Grid.Column="1"
+                            HorizontalOptions="Start"/>
+                    
+                    <Label Text="961"
+                            FontSize="20"
+                            TextColor="#fdfdfd"
+                            Grid.Row="4"
+                            Grid.Column="1"
+                           HorizontalOptions="Start"/>
+                </Grid>
+            </Frame>
+
+        </StackLayout>
+                </ContentView>
+                <ContentView>
+                    <StackLayout>
+         <Frame Margin="20,10,20,30"
+                   Padding="20"
+                   Visual="Material"
+                   BackgroundColor="#82AAE3"
+                   HasShadow="False">
+                <Grid ColumnSpacing="30"
+                      RowSpacing="0">
+                   <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions> 
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="70"/>
+                    </Grid.ColumnDefinitions>
+                  
+                    <Image Source="new_logo.png"
+                           HeightRequest="40"
+                           Grid.Row="0"
+                           Grid.Column="2"
+                           HorizontalOptions="Start"/>
+
+                    <Label Text="Available Balance"
+                           LineBreakMode="TailTruncation"
+                           FontSize="14"
+                           TextColor="#fdfdfd"
+                           Grid.Row="0"
+                           Grid.ColumnSpan="2"
+                           Grid.Column="0"
+                           />
+                    
+                     <Label Text="235.40 $"
+                            FontSize="30"
+                            TextColor="#fdfdfd"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            FontFamily="AtypDisplayBold"/>
+
+
+                    <Label Text="**** **** **** ****"
+                           Margin="0,20, 0, 0"
+                            FontSize="23"
+                            TextColor="#fdfdfd"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            FontFamily="AtypDisplayBold"/>
+
+                    <Label Text="Expiration"
+                           Margin="0,20,0,0"
+                           FontSize="12"
+                           TextColor="#fdfdfd"
+                           Grid.Row="3"
+                           Grid.RowSpan="2"
+                           Grid.Column="0"/>
+                    
+                    <Label Text="12/24"
+                            FontSize="20"
+                            TextColor="#fdfdfd"
+                            Grid.Row="4"
+                            Grid.Column="0"/>
+                    
+                     <Label Text="Cvv"
+                            Margin="0,20,0,0"
+                           FontSize="12"
+                           TextColor="#fdfdfd"
+                           Grid.Row="3"
+                           Grid.Column="1"
+                            HorizontalOptions="Start"/>
+                    
+                    <Label Text="961"
+                            FontSize="20"
+                            TextColor="#fdfdfd"
+                            Grid.Row="4"
+                            Grid.Column="1"
+                           HorizontalOptions="Start"/>
+                </Grid>
+            </Frame>
+
+        </StackLayout>
+                </ContentView>
+            </x:Array>
+        </CarouselView.ItemsSource>
+        <CarouselView.ItemTemplate>
+            <DataTemplate>
+                <ContentView Content="{Binding .}" />
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+
+
     </VerticalStackLayout>
 </ContentPage>
