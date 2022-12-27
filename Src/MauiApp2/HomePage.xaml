@@ -3,7 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp2.HomePage"
              Title="HomePage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             
+             >
+
     <ContentPage.Resources>
 
 
@@ -19,7 +22,7 @@
                         HorizontalOptions="Start"
                         WidthRequest="30"
                         Source="menu.png"
-                        >
+                        Clicked="OpenFlayout">
 
            </ImageButton>
 
@@ -73,7 +76,7 @@
 
 
 
-            <CarouselView VerticalOptions="FillAndExpand"
+            <CarouselView HeightRequest="250"
                           Loop="False">
         <CarouselView.ItemsSource>
             <x:Array Type="{x:Type ContentView}">
@@ -262,6 +265,133 @@
         </CarouselView.ItemTemplate>
     </CarouselView>
 
+       <Label 
+            Grid.Row="2"
+            Text="Categories"
+            FontFamily="AtypDisplayBold"
+            TextColor="#000"
+            HorizontalTextAlignment="Start"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            FontSize="25"
+            Margin="32,12,32,0"
+            LineHeight="1.2">
+
+        </Label>
+
+
+
+   <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Never" Margin="20,0,0,0">
+       <ScrollView.Content>
+
+             <HorizontalStackLayout Spacing="10">
+
+            <Frame HeightRequest="60"
+               WidthRequest="160"
+               BackgroundColor="#EAFDFC"
+               HasShadow="False"
+               Padding="0"
+               CornerRadius="10"
+               >
+            <Grid ColumnDefinitions="*,*">
+                <Image Source="games.png"
+                       WidthRequest="25"
+                       HeightRequest="25"
+                       Grid.Column="0"
+                       />
+                <Label Text="Gaming"
+                       Grid.Column="1"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"
+                       FontFamily="AtypDisplayRegular"
+                       >
+
+
+                </Label>
+                       
+
+            </Grid>
+           
+        </Frame>
+                  <Frame HeightRequest="60"
+               WidthRequest="160"
+               BackgroundColor="#EAFDFC"
+               HasShadow="False"
+               Padding="0"
+               CornerRadius="10"
+               >
+            <Grid ColumnDefinitions="*,*">
+                <Image Source="tele.png"
+                       WidthRequest="25"
+                       HeightRequest="25"
+                       Grid.Column="0"
+                       />
+                <Label Text="Telecome"
+                       Grid.Column="1"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"
+                       FontFamily="AtypDisplayRegular"
+                       >
+
+
+                </Label>
+                       
+
+            </Grid>
+           
+        </Frame>
+            <Frame HeightRequest="60"
+               WidthRequest="160"
+               BackgroundColor="#EAFDFC"
+               HasShadow="False"
+               Padding="0"
+               CornerRadius="10"
+               >
+            <Grid ColumnDefinitions="*,*">
+                <Image Source="bill.png"
+                       WidthRequest="25"
+                       HeightRequest="25"
+                       Grid.Column="0"
+                       />
+                <Label Text="Billing"
+                       Grid.Column="1"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"
+                       FontFamily="AtypDisplayRegular"
+                       >
+
+
+                </Label>
+                       
+
+            </Grid>
+
+
+        </Frame>
+
+
+        </HorizontalStackLayout>
+             
+       </ScrollView.Content>
+      
+        
+                        
+
+   </ScrollView>
+        
+        <Label 
+            
+            Text="Most Popular"
+            FontFamily="AtypDisplayBold"
+            TextColor="#000"
+            HorizontalTextAlignment="Start"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            FontSize="25"
+            Margin="32,12,32,0"
+            LineHeight="1.2">
+
+        </Label>
 
     </VerticalStackLayout>
 </ContentPage>

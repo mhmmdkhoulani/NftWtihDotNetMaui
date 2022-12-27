@@ -1,16 +1,20 @@
-﻿namespace MauiApp2;
+﻿using MauiApp2.Models;
+namespace MauiApp2;
 
 public partial class HomePage : ContentPage
 {
+
+    
 	public HomePage()
 	{
 		InitializeComponent();
+
         BindingContext = this;
 	}
 
 
-    async void GoToHome(object sender, EventArgs args)
+    void OpenFlayout(object sender, EventArgs args)
     {
-        await Shell.Current.GoToAsync(nameof(HomePage), true);
+         Shell.Current.FlyoutIsPresented = true;
     }
 }

@@ -44,6 +44,12 @@
 		<MauiImage Include="Resources\Images\*" />
 		<MauiFont Include="Resources\Fonts\*" />
 
+		<MauiImage Update="Resources\Images\settings_bar.png" BaseSize="30,30" />
+		<MauiImage Update="Resources\Images\card_bar.png" BaseSize="30,30" />
+
+		<MauiImage Update="Resources\Images\home_bar.png" BaseSize="30,30" />
+		<MauiImage Update="Resources\Images\wallet_bar.png" BaseSize="30,30" />
+
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
@@ -61,6 +67,13 @@
 	  <BundleResource Include="Resources\Images\notification.png" />
 	  <BundleResource Include="Resources\Images\bell.png" />
 	  <BundleResource Include="Resources\Images\mastercard.png" />
+	  <BundleResource Include="Resources\Images\bill.png" />
+	  <BundleResource Include="Resources\Images\tele.png" />
+	  <BundleResource Include="Resources\Images\games.png" />
+	  <BundleResource Include="Resources\Images\card_bar.png" />
+	  <BundleResource Include="Resources\Images\home_bar.png" />
+	  <BundleResource Include="Resources\Images\settings_bar.png" />
+	  <BundleResource Include="Resources\Images\wallet_bar.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiXaml Update="LoginPage.xaml">
@@ -76,8 +89,19 @@
 	  <None Remove="Resources\Images\notification.png" />
 	  <None Remove="Resources\Images\bell.png" />
 	  <None Remove="Resources\Images\mastercard.png" />
+	  <None Remove="Models\" />
+	  <None Remove="Resources\Images\bill.png" />
+	  <None Remove="Resources\Images\tele.png" />
+	  <None Remove="Resources\Images\games.png" />
+	  <None Remove="Resources\Images\bar\" />
+	  <None Remove="Resources\Images\card_bar.png" />
+	  <None Remove="Resources\Images\home_bar.png" />
+	  <None Remove="Resources\Images\settings_bar.png" />
+	  <None Remove="Resources\Images\wallet_bar.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Custom Render\" />
+	  <Folder Include="Models\" />
+	  <Folder Include="Resources\Images\bar\" />
 	</ItemGroup>
 </Project>

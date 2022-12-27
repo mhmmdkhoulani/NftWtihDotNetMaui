@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp2.LoginPage"
              Title="LoginPage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
 
     
         <StackLayout VerticalOptions="End" Spacing="12" Margin="0,0,0,40    ">
